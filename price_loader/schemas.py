@@ -27,9 +27,9 @@ class DetailSchema(BaseModel):
         return int(val.split("-")[1])
 
     @computed_field
-    def searchVendor(self) -> str:
+    def search_vendor(self) -> str:
         return "".join(char for char in self.vendor if char.isalnum()).upper()
 
     @computed_field
-    def searchNumber(self) -> str:
+    def search_number(self) -> str:
         return "".join(char for char in self.number if char.isalnum()).upper()
